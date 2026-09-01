@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olimstadkilen sauna — vedfyrt flytebadstue i Vegårshei</title>
+<meta name="description" content="Vedfyrt flytebadstue i Olimstadkilen, Vegårshei. Åpent onsdag–søndag kl. 10–22. Book via Instagram eller SMS.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Olimstadkilen sauna">
+<meta property="og:description" content="Vedfyrt flytebadstue i Olimstadkilen, Vegårshei. Åpent onsdag–søndag kl. 10–22.">
+<meta property="og:type" content="website">
+<!-- Sett og bytt inn et ekte delingsbilde her når det finnes, f.eks. og:image content="/bilder/kveld.jpg" -->
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Olimstadkilen sauna",
+  "description": "Vedfyrt flytebadstue i Olimstadkilen, Vegårshei.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vegårshei",
+    "addressRegion": "Agder",
+    "addressCountry": "NO"
+  },
+  "telephone": "+4795271422",
+  "priceRange": "150 kr",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "10:00",
+    "closes": "22:00"
+  },
+  "sameAs": ["https://www.instagram.com/olimstadkilen_sauna/"]
+}
+</script>
+
+<style>
+  :root{
+    --ink:      #10181B;   /* natta over vannet */
+    --ink-2:    #182225;   /* litt lysere flate på mørk bunn */
+    --bark:     #1E2822;   /* våt bark / skumring i skogen */
+    --ember:    #E2A64B;   /* glødet fra badstuvinduet */
+    --ember-2:  #C98A34;   /* mørkere glød, for hover */
+    --birch:    #F3ECDD;   /* never-bark / papir */
+    --birch-dim:#D9D0BC;
+    --moss:     #7C8B7D;   /* dempet grønn, sekundærtekst på mørk bunn */
+    --moss-line:#33413A;   /* delelinjer på mørk bunn */
+    --frost:    #C9D6D3;   /* is/kaldt vann */
+    --stone:    #E9E4D6;   /* lys bunn for "dag"-seksjoner */
+    --stone-2:  #DCD5C2;
+    --text-dark:#1B211C;   /* brødtekst på lys bunn */
+    --text-dim: #5B655C;
+
+    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --wrap: 1120px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--stone);
+    color:var(--text-dark);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  p{ margin:0 0 1em; }
+  p:last-child{ margin-bottom:0; }
+
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:var(--wrap);
+    margin:0 auto;
+    padding:0 22px;
+  }
+
+  :focus-visible{
+    outline:2px solid var(--ember);
+    outline-offset:3px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(16,24,27,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--moss-line);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:14px 22px;
+    max-width:var(--wrap);
+    margin:0 auto;
+  }
+  .wordmark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--birch);
+    font-family:var(--serif);
+    font-size:1.05rem;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .wordmark .glow{
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--ember);
+    box-shadow:0 0 8px 2px rgba(226,166,75,0.7);
+    flex:none;
+  }
+  nav.primary-nav{
+    display:none;
+    gap:26px;
+    font-size:0.92rem;
+  }
+  nav.primary-nav a{
+    text-decoration:none;
+    color:var(--frost);
+    transition:color .15s ease;
+  }
+  nav.primary-nav a:hover{ color:var(--ember); }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 18px;
+    border-radius:3px;
+    font-family:var(--sans);
+    font-size:0.92rem;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    line-height:1.1;
+  }
+  .btn-ember{
+    background:var(--ember);
+    color:var(--ink);
+  }
+  .btn-ember:hover{ background:var(--ember-2); }
+  .btn-outline{
+    background:transparent;
+    border-color:var(--frost);
+    color:var(--birch);
+  }
+  .btn-outline:hover{ border-color:var(--ember); color:var(--ember); }
+  .btn-outline-dark{
+    background:transparent;
+    border-color:var(--text-dim);
+    color:var(--text-dark);
+  }
+  .btn-outline-dark:hover{ border-color:var(--ink); }
+  .btn-small{ padding:9px 14px; font-size:0.85rem; }
+
+  header .btn{ flex:none; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse 700px 420px at 78% 8%, rgba(226,166,75,0.16), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, var(--bark) 100%);
+    color:var(--birch);
+    padding:56px 0 64px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:34px;
+    align-items:center;
+  }
+  .eyebrow-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--frost);
+    font-size:0.86rem;
+    margin-bottom:18px;
+  }
+  .eyebrow-loc svg{ flex:none; }
+
+  .hero h1{
+    font-size:clamp(2.3rem, 7vw, 3.6rem);
+    line-height:1.06;
+    color:var(--birch);
+    max-width:14ch;
+  }
+  .hero .lede{
+    margin-top:18px;
+    color:var(--frost);
+    font-size:1.08rem;
+    max-width:44ch;
+  }
+
+  .status-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-top:26px;
+    padding:9px 15px;
+    border:1px solid var(--moss-line);
+    border-radius:3px;
+    font-size:0.88rem;
+    color:var(--birch-dim);
+    background:rgba(255,255,255,0.03);
+  }
+  .status-pill .glow{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--ember);
+    box-shadow:0 0 7px 2px rgba(226,166,75,0.65);
+    flex:none;
+  }
+
+  .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
+  }
+
+  .hero-photo{
+    aspect-ratio:4/5;
+    border:1px solid var(--moss-line);
+    background:var(--ink);
+    overflow:hidden;
+  }
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .booking-photo{
+    aspect-ratio:5/4;
+    border:1px solid var(--moss-line);
+    overflow:hidden;
+  }
+  .booking-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .map-embed{
+    aspect-ratio:5/4;
+    border:1px solid var(--moss-line, #CFC7AF);
+    overflow:hidden;
+  }
+  .map-embed iframe{
+    width:100%;
+    height:100%;
+    border:0;
+    display:block;
+  }
+
+  /* ---------- ripple divider ---------- */
+  .ripple{
+    height:26px;
+    width:100%;
+    display:block;
+  }
+
+  /* ---------- section shells ---------- */
+  section{ padding:64px 0; }
+  .section-dark{ background:var(--ink); color:var(--birch); }
+  .section-light{ background:var(--stone); color:var(--text-dark); }
+  .section-mid{ background:var(--stone-2); color:var(--text-dark); }
+
+  .kicker{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1rem;
+    color:var(--ember);
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-dark .kicker{ color:var(--ember); }
+  .section-light .kicker, .section-mid .kicker{ color:var(--ember-2); }
+
+  h2{ font-size:clamp(1.6rem, 4vw, 2.2rem); }
+
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:34px;
+    align-items:start;
+  }
+
+  .body-text{
+    max-width:52ch;
+    font-size:1.02rem;
+  }
+  .section-dark .body-text{ color:var(--frost); }
+  .section-light .body-text, .section-mid .body-text{ color:var(--text-dim); }
+
+  .placeholder-photo{
+    aspect-ratio:5/4;
+    border:1px dashed var(--moss);
+    background:repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0 12px, transparent 12px 24px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    padding:20px;
+    text-align:center;
+    color:var(--text-dim);
+  }
+  .section-dark .placeholder-photo{
+    border-color:var(--moss-line);
+    background:repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 12px, transparent 12px 24px);
+    color:var(--moss);
+  }
+  .placeholder-photo span{ font-size:0.82rem; max-width:26ch; }
+  .placeholder-photo svg{ opacity:0.7; }
+
+  /* ---------- booking ---------- */
+  .price-block{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:8px;
+  }
+  .price-num{
+    font-family:var(--serif);
+    font-size:3.4rem;
+    color:var(--ember);
+    line-height:1;
+  }
+  .price-unit{ color:var(--moss); font-size:0.95rem; }
+
+  .facts{
+    list-style:none;
+    margin:26px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .facts li{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-top:1px solid var(--moss-line);
+    font-size:0.98rem;
+  }
+  .facts li:last-child{ border-bottom:1px solid var(--moss-line); }
+  .facts .fk{
+    flex:none;
+    width:8.5em;
+    color:var(--moss);
+    font-size:0.86rem;
+    padding-top:2px;
+  }
+  .facts .fv{ color:var(--birch-dim); }
+  .facts .fv a{ color:var(--ember); text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---------- directions ---------- */
+  .directions-steps{
+    margin:22px 0 0;
+    padding:0;
+    list-style:none;
+    counter-reset:step;
+  }
+  .directions-steps li{
+    counter-increment:step;
+    display:flex;
+    gap:16px;
+    padding:14px 0;
+    border-top:1px solid var(--moss-line, #D9D2BE);
+  }
+  .section-light .directions-steps li, .section-mid .directions-steps li{ border-top:1px solid #CFC7AF; }
+  .directions-steps li::before{
+    content: counter(step);
+    font-family:var(--serif);
+    font-size:0.95rem;
+    color:var(--ember-2);
+    flex:none;
+    width:1.6em;
+  }
+  .caution{
+    margin-top:22px;
+    padding:14px 16px;
+    border-left:3px solid var(--ember-2);
+    background:rgba(201,138,52,0.09);
+    font-size:0.92rem;
+    color:var(--text-dark);
+  }
+
+  /* ---------- rules ---------- */
+  .rules-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+    margin-top:8px;
+  }
+  .rules-list{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+  }
+  .rules-list li{
+    display:flex;
+    gap:12px;
+    font-size:0.98rem;
+    color:var(--frost);
+  }
+  .rules-list li::before{
+    content:"";
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--moss);
+    flex:none;
+    margin-top:9px;
+  }
+  .rules-list.safety li::before{ background:var(--ember); }
+  .rules-list.safety li{ color:var(--birch); }
+  .rules-note{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid var(--moss-line);
+    font-size:0.9rem;
+    color:var(--moss);
+  }
+  .rules-note p{ margin-bottom:6px; }
+
+  /* ---------- instagram ---------- */
+  .ig-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:8px;
+    margin-top:28px;
+  }
+  .ig-cell{
+    aspect-ratio:1/1;
+    border:1px solid var(--moss-line);
+    background:linear-gradient(160deg, rgba(226,166,75,0.12), rgba(255,255,255,0.02));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--moss);
+  }
+  .ig-follow{
+    margin-top:26px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:16px;
+  }
+  .ig-handle{ color:var(--frost); font-size:0.92rem; }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--moss);
+    padding:44px 0 30px;
+    border-top:1px solid var(--moss-line);
+  }
+  .footer-grid{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    font-size:0.9rem;
+  }
+  footer strong{ color:var(--birch-dim); font-weight:500;}
+  .footer-row{ display:flex; flex-wrap:wrap; gap:8px 22px; }
+  .footer-credit{
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px solid var(--moss-line);
+    font-size:0.8rem;
+    color:#4B5952;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (min-width:780px){
+    nav.primary-nav{ display:flex; }
+    .hero-grid{ grid-template-columns:1.15fr 0.85fr; gap:52px; }
+    .two-col{ grid-template-columns:1fr 1fr; gap:60px; }
+    .two-col.reverse{ direction:rtl; }
+    .two-col.reverse > *{ direction:ltr; }
+    .rules-grid{ grid-template-columns:1fr 1fr; }
+    section{ padding:92px 0; }
+    .hero{ padding:78px 0 96px; }
+    .footer-grid{ flex-direction:row; justify-content:space-between; align-items:flex-start; }
+  }
+
+  @media (max-width:479px){
+    .cta-row{ flex-direction:column; align-items:stretch; }
+    .cta-row .btn{ justify-content:center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a class="wordmark" href="#top">
+      <span class="glow" aria-hidden="true"></span>
+      Olimstadkilen sauna
+    </a>
+    <nav class="primary-nav" aria-label="Hovedmeny">
+      <a href="#om">Om badstua</a>
+      <a href="#booking">Booking</a>
+      <a href="#veibeskrivelse">Veibeskrivelse</a>
+      <a href="#regler">Regler</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-ember btn-small" href="#booking">Book badstua</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow-loc">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Olimstadkilen, Vegårshei
+        </span>
+        <h1>Varmen midt&nbsp;i kilen.</h1>
+        <p class="lede">En vedfyrt flytebadstue i Olimstadkilen, et par minutter fra Vegårshei sentrum. Fyrt opp for naboer, venner og alle som vil ta seg et dukkert.</p>
+
+        <div class="status-pill">
+          <span class="glow" aria-hidden="true"></span>
+          Åpent onsdag–søndag, kl. 10–22
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-ember" href="https://www.instagram.com/olimstadkilen_sauna/" target="_blank" rel="noopener">Book via Instagram</a>
+          <a class="btn btn-outline" href="sms:+4795271422">Send SMS til 952 71 422</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/olimstadkilen-1.jpg" alt="Den flytende badstua i Olimstadkilen en klar morgen, med røyk fra pipa og speilblankt vann.">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OM BADSTUA ============ -->
+  <section class="section-light" id="om">
+    <div class="wrap two-col">
+      <div>
+        <span class="kicker">Om badstua</span>
+        <h2>Fyrt med ved, slik det alltid har vært gjort</h2>
+      </div>
+      <div class="body-text">
+        <p>Badstua flyter i Olimstadkilen, en liten vik av Vegår. Den fyres med ved og varmes opp til den er klar for gjester som vil svette ut kulda og ta et dukkert i vannet utenfor.</p>
+        <p>Sett av en time, ta med håndkle, og gjør badstua klar for neste gjest når du går — det er alt som skal til.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING ============ -->
+  <section class="section-dark" id="booking">
+    <div class="wrap two-col">
+      <div>
+        <span class="kicker">Booking og pris</span>
+        <h2>Enkelt å booke, enkelt å betale</h2>
+        <div class="booking-photo" style="margin-top:28px;">
+          <img src="images/olimstadkilen-2.jpg" alt="Utsikt gjennom badstuvinduet, med en gjest inne i varmen og stigen ned til vannet.">
+        </div>
+      </div>
+
+      <div>
+        <div class="price-block">
+          <span class="price-num">150 kr</span>
+          <span class="price-unit">per person, per time</span>
+        </div>
+        <ul class="facts">
+          <li><span class="fk">Åpningstider</span><span class="fv">Onsdag–søndag, kl. 10–22</span></li>
+          <li><span class="fk">Booking</span><span class="fv">DM på <a href="https://www.instagram.com/olimstadkilen_sauna/" target="_blank" rel="noopener">Instagram</a> eller SMS til 952 71 422</span></li>
+          <li><span class="fk">Betaling</span><span class="fv">Vipps til #950014</span></li>
+        </ul>
+        <div class="cta-row" style="margin-top:28px;">
+          <a class="btn btn-ember" href="https://www.instagram.com/olimstadkilen_sauna/" target="_blank" rel="noopener">Book via Instagram</a>
+          <a class="btn btn-outline" href="sms:+4795271422">Send SMS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VEIBESKRIVELSE ============ -->
+  <section class="section-mid" id="veibeskrivelse">
+    <div class="wrap two-col reverse">
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1484.72964863235!2d8.909943675903781!3d58.75589935678977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46479f0003c57231%3A0xfa6639bb7c5f70ba!2sOlimstadkilen%20sauna!5e1!3m2!1sno!2sno!4v1788282339095!5m2!1sno!2sno" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Kart til Olimstadkilen sauna"></iframe>
+      </div>
+      <div>
+        <span class="kicker">Slik finner du fram</span>
+        <h2>Fra Bråtenkrysset til badstudøra</h2>
+        <ol class="directions-steps">
+          <li>Badstua ligger i Olimstadkilen, cirka tre minutter fra Vegårshei sentrum, retning Akland.</li>
+          <li>Fra Bråtenkrysset tar du til venstre av Aklandsveien.</li>
+          <li>Følg grusveien innover, og videre langs hytteveien forbi husene.</li>
+          <li>Et stykke inn finner du parkeringen til badstua.</li>
+        </ol>
+        <div class="caution">Veien egner seg ikke for lave biler. Det skal ikke kjøres lenger inn enn til parkeringen.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGLER ============ -->
+  <section class="section-dark" id="regler">
+    <div class="wrap">
+      <span class="kicker">Regler for god badstukos</span>
+      <h2 style="max-width:20ch;">Sikkerhets- og trivselsregler</h2>
+
+      <div class="rules-grid">
+        <div>
+          <ul class="rules-list safety">
+            <li>All bading og badstu skjer på eget ansvar.</li>
+            <li>Vær forsiktig — det kan være glatt på brygga.</li>
+            <li>Hold avstand til ovnen, den er varm.</li>
+          </ul>
+          <ul class="rules-list" style="margin-top:22px;">
+            <li>Sitt alltid på håndkle.</li>
+            <li>Ikke kast bøtter med vann på ovnen — bruk små øser.</li>
+            <li>Bruk gjerne badstuduft, men følg doseringen på flasken.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="rules-list">
+            <li>Tøm vannbøtta før du går. Er det brukt duft i vannet, tømmes den på land.</li>
+            <li>Drikk nok vann. Forlat badstua om du føler deg uvel.</li>
+            <li>Forlat badstue og skifterom i den standen du selv vil komme til.</li>
+          </ul>
+          <div class="rules-note">
+            <p>Vanndybde: fra 2 m ved badestigen til 4 m ved ytre hjørne av brygga.</p>
+            <p>Badstuen rengjøres ukentlig.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section class="section-light" id="instagram">
+    <div class="wrap">
+      <span class="kicker">Følg med</span>
+      <h2>Ledige tider og stemningsbilder</h2>
+      <p class="body-text" style="margin-top:14px;">Vi legger ut ledige tider og bilder fra kilen på Instagram. Følg <strong>@olimstadkilen_sauna</strong> for det som skjer gjennom sesongen.</p>
+
+      <!--
+        Denne rutenettet er en plassholder. For en feed som oppdaterer seg
+        automatisk må Instagram-kontoen kobles til en forretningskonto og en
+        widget-tjeneste (f.eks. SnapWidget, Elfsight eller Instagram Graph
+        API). Når det er på plass, byttes #ig-grid ut med tjenestens
+        embed-kode / script-tag.
+      -->
+      <div class="ig-grid" id="ig-grid" aria-hidden="true">
+        <div class="ig-cell"></div>
+        <div class="ig-cell"></div>
+        <div class="ig-cell"></div>
+        <div class="ig-cell"></div>
+        <div class="ig-cell"></div>
+        <div class="ig-cell"></div>
+      </div>
+
+      <div class="ig-follow">
+        <a class="btn btn-outline-dark" href="https://www.instagram.com/olimstadkilen_sauna/" target="_blank" rel="noopener">Åpne Instagram-profilen</a>
+        <span class="ig-handle">@olimstadkilen_sauna · 823 følgere</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="kontakt">
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Olimstadkilen sauna</strong><br>
+      Olimstadkilen, Vegårshei, Agder
+    </div>
+    <div>
+      <div class="footer-row">
+        <span>Feil eller merknader:</span>
+        <span><strong>Per Olav Olimstad</strong>, tlf. <a href="tel:+4795271422">952 71 422</a></span>
+      </div>
+      <div class="footer-row" style="margin-top:8px;">
+        <span>Vipps #950014</span>
+        <a href="https://www.instagram.com/olimstadkilen_sauna/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-credit">
+    Nettside laget for Olimstadkilen sauna. Bilder byttes inn når eier har valgt hva som skal brukes.
+  </div>
+</footer>
+
+</body>
+</html>
